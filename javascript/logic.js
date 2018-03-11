@@ -20,8 +20,15 @@
       count--;
       firebase.database().ref().set({
           clicks:count
-    })
+    });
 
   })
+
+  $('#restartButton').on("click",function(){
+      firebase.database().ref().set({
+          clicks:100
+      });
+  })
+
 
  
